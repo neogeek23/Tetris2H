@@ -12,9 +12,9 @@ use amethyst::{
     window::{ScreenDimensions, Window, WindowBundle},
 };
 
-pub struct Tetris;
+mod tetris;
 
-impl SimpleState for Tetris{}
+use crate::tetris::Tetris;
 
 fn main() -> amethyst::Result<()>{
     amethyst::start_logger(Default::default());
