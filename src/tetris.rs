@@ -12,11 +12,11 @@ pub const ARENA_WIDTH: f32 = 100.0;
 
 pub struct Tetris;
 
-impl SimpleState for Tetris{}
-
-impl SimpleState for Pong {
+impl SimpleState for Tetris {
     fn on_start(&mut self, data: StateData<'_, GameData<'_, '_>>) {
+        let world = data.world;
 
+        initialise_camera(world);
     }
 }
 
