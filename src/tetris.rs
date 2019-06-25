@@ -1,7 +1,7 @@
 use amethyst::{
     //assets::{AssetStorage, Loader, Handle},
     core::transform::Transform,
-    //ecs::prelude::{Component, DenseVecStorage},
+    ecs::prelude::{Component, DenseVecStorage},
     prelude::*,
     renderer::{Camera, 
     //ImageFormat, SpriteRender, SpriteSheet, SpriteSheetFormat, Texture
@@ -70,6 +70,10 @@ impl Shape{
             blocks: blocks,
         }
     }
+}
+
+impl Component for Shape{
+    type Storage = DenseVecStorage<Self>;
 }
 
 pub struct Tetris;
